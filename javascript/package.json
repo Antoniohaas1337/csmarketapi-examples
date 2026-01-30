@@ -1,0 +1,19 @@
+{
+  "name": "csmarketapi-examples",
+  "version": "1.0.0",
+  "description": "Code examples for CSMarketAPI",
+  "type": "module",
+  "scripts": {
+    "quickstart": "node quickstart.js",
+    "price-tracking": "node price_tracking.js",
+    "market-comparison": "node market_comparison.js",
+    "historical-analysis": "node historical_analysis.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "csmarketapi": "^2.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
