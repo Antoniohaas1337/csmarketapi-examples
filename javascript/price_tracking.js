@@ -5,7 +5,7 @@
  */
 import { CSMarketAPI, Market, Currency } from "csmarketapi"
 
-// Items to track
+// Items to track - replace with your items
 const WATCHLIST = [
   "Chroma 2 Case",
   "AWP | Asiimov (Field-Tested)",
@@ -13,7 +13,7 @@ const WATCHLIST = [
   "Glove Case",
 ]
 
-// Price alerts: item -> target price
+// Price alerts: item -> target price - customize your alerts
 const PRICE_ALERTS = {
   "Chroma 2 Case": 0.40,
   "AWP | Asiimov (Field-Tested)": 35.00,
@@ -95,6 +95,8 @@ async function checkAlerts(client) {
 }
 
 // Main execution
+// Get API key from environment variable
+// Set it with: export CSMARKETAPI_KEY="your_api_key"
 const client = new CSMarketAPI({
   apiKey: process.env.CSMARKETAPI_KEY
 })

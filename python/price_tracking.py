@@ -9,7 +9,7 @@ from datetime import datetime
 from csmarketapi import CSMarketAPI
 from csmarketapi.enums import Market, Currency
 
-# Items to track
+# Items to track - replace with your items
 WATCHLIST = [
     "Chroma 2 Case",
     "AWP | Asiimov (Field-Tested)",
@@ -17,7 +17,7 @@ WATCHLIST = [
     "Glove Case",
 ]
 
-# Price alerts: item -> target price
+# Price alerts: item -> target price - customize your alerts
 PRICE_ALERTS = {
     "Chroma 2 Case": 0.40,
     "AWP | Asiimov (Field-Tested)": 35.00,
@@ -120,6 +120,8 @@ async def run_periodic_check(client):
 
 
 async def main():
+    # Get API key from environment variable
+    # Set it with: export CSMARKETAPI_KEY="your_api_key"
     api_key = os.environ["CSMARKETAPI_KEY"]
 
     async with CSMarketAPI(api_key) as client:

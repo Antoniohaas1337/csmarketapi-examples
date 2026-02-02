@@ -106,12 +106,14 @@ async function analyzePlayerCorrelation(client, itemName, startDate, endDate) {
 }
 
 // Main execution
+// Get API key from environment variable
+// Set it with: export CSMARKETAPI_KEY="your_api_key"
 const client = new CSMarketAPI({
   apiKey: process.env.CSMARKETAPI_KEY
 })
 
-const itemName = "AK-47 | Redline (Field-Tested)"
-const startDate = "2024-01-01"
+const itemName = "AK-47 | Redline (Field-Tested)"  // Replace with your item
+const startDate = "2024-01-01"  // Adjust date range
 const endDate = "2024-01-31"
 
 // 1. Get recent price history (listings)

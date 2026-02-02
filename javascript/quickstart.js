@@ -5,12 +5,14 @@
  */
 import { CSMarketAPI, Currency } from "csmarketapi"
 
+// Get API key from environment variable
+// Set it with: export CSMARKETAPI_KEY="your_api_key"
 const client = new CSMarketAPI({
   apiKey: process.env.CSMARKETAPI_KEY
 })
 
 const res = await client.getListingsLatestAggregated({
-  marketHashName: "Chroma 2 Case",
+  marketHashName: "Chroma 2 Case",  // Replace with your item
   currency: Currency.USD,
 })
 

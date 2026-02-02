@@ -90,10 +90,13 @@ async function findArbitrage(client, itemName) {
 }
 
 // Main execution
+// Get API key from environment variable
+// Set it with: export CSMARKETAPI_KEY="your_api_key"
 const client = new CSMarketAPI({
   apiKey: process.env.CSMARKETAPI_KEY
 })
 
+// Items to check - replace with your items
 const itemsToCheck = [
   "AK-47 | Redline (Field-Tested)",
   "AWP | Asiimov (Field-Tested)",

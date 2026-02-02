@@ -95,8 +95,11 @@ async def find_arbitrage(client, item_name):
 
 
 async def main():
+    # Get API key from environment variable
+    # Set it with: export CSMARKETAPI_KEY="your_api_key"
     api_key = os.environ["CSMARKETAPI_KEY"]
 
+    # Items to check - replace with your items
     items_to_check = [
         "AK-47 | Redline (Field-Tested)",
         "AWP | Asiimov (Field-Tested)",

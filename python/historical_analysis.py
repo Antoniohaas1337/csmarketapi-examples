@@ -108,11 +108,13 @@ async def analyze_player_correlation(client, item_name, start_date, end_date):
 
 
 async def main():
+    # Get API key from environment variable
+    # Set it with: export CSMARKETAPI_KEY="your_api_key"
     api_key = os.environ["CSMARKETAPI_KEY"]
 
     async with CSMarketAPI(api_key) as client:
-        item_name = "AK-47 | Redline (Field-Tested)"
-        start_date = "2024-01-01"
+        item_name = "AK-47 | Redline (Field-Tested)"  # Replace with your item
+        start_date = "2024-01-01"  # Adjust date range
         end_date = "2024-01-31"
 
         # 1. Get recent price history
